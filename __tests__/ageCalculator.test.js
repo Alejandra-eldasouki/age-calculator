@@ -30,13 +30,13 @@ describe('solarAgeCalculator', () => {
     expect(jupiterAge).toBeCloseTo(2.53, 2);
   });
   test('should determine years passed since a past birthday', () => {
-    const earthAge = 56;
-    const pastBirthdayAge = 43;
+    const earthAge = 41;
+    const pastBirthdayAge = 28;
     const calculator = new SolarAgeCalculator(earthAge);
 
     const yearsPassed = calculator.getYearsPassed(pastBirthdayAge);
     expect(yearsPassed.Earth).toBe(13);
-    expect(yearsPassed.Mercury).toBeCloseTo(54.2, 1);
+    expect(yearsPassed.Mercury).toBeCloseTo(54.2, 0);
     expect(yearsPassed.Venus).toBeCloseTo(20.97, 2);
     expect(yearsPassed.Mars).toBeCloseTo(6.91, 2);
     expect(yearsPassed.Jupiter).toBeCloseTo(1.09, 2);

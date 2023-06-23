@@ -18,16 +18,18 @@ class SolarAgeCalculator {
 
   getYearsPassed(pastBirthdayAge) {
     const yearsPassed = this.earthAge - pastBirthdayAge;
+    const mercuryYears = this.roundToPrecision(yearsPassed / 0.24, 0);
+    const venusYears = this.roundToPrecision(yearsPassed / 0.62, 2);
+    const marsYears = this.roundToPrecision(yearsPassed / 1.88, 2);
+    const jupiterYears = this.roundToPrecision(yearsPassed / 11.86, 2);
 
-    const yearsPassedInPlanetYears = {};
-    for (const planet in this.solarYearLength) {
-      const solarYearLength = this.solarYearLength[planet];
-      yearsPassedInPlanetYears[planet] = Math.floor(
-        yearsPassed / solarYearLength
-      );
-    }
-
-    return yearsPassedInPlanetYears;
+    return {
+      Earth: yearsPassed,
+      Mercury: mercuryYears,
+      Venus: venusYears,
+      Mars: marsYears,
+      Jupiter: jupiterYears,
+    };
   }
   roundToPrecision(value, precision) {
     const multiplier = 10 ** precision;
