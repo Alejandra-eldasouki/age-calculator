@@ -2,6 +2,7 @@ class SolarAgeCalculator {
   constructor(earthAge) {
     this.earthAge = earthAge;
     this.solarYearLength = {
+      Earth: 1,
       Mercury: 0.24,
       Venus: 0.62,
       Mars: 1.88,
