@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1687561716295" clover="3.2.0">
-  <project timestamp="1687561716295" name="All files">
+<coverage generated="1687561823537" clover="3.2.0">
+  <project timestamp="1687561823537" name="All files">
     <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="15" coveredelements="15" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
     <file name="solarAge.js" path="/Users/alejandrael-dasouki/epicodus/week5/age-calculator/src/solarAge.js">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
