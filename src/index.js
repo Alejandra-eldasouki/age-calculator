@@ -1,4 +1,5 @@
 import SolarAgeCalculator from './solarAge';
+// const SolarAgeCalculator = require('./solarAge');
 
 const earthAgeInput = document.getElementById('earth-age');
 const calculateButton = document.getElementById('calculate-button');

@@ -1,8 +1,8 @@
-const solarAgeCalculator = require('./solarAge');
+import SolarAgeCalculator from '../src/solarAge.js';
 
 describe('solarAgeCalculator', () => {
   const earthAge = 56;
-  const calculator = new solarAgeCalculator(earthAge);
+  const calculator = new SolarAgeCalculator(earthAge);
 });
 test('should calculate age in Mercury years', () => {
   const mercuryAge = calculator.getInPlanetYears('Mercury');
