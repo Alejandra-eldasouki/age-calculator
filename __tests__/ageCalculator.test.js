@@ -6,6 +6,6 @@ describe('solarAgeCalculator', () => {
     const calculator = new SolarAgeCalculator(earthAge);
 
     const mercuryAge = calculator.getAgeInPlanetYears('Mercury');
-    expect(mercuryAge).toBeCloseTo(7.2, 2);
+    expect(mercuryAge).toBeCloseTo(125, 2);
   });
 });

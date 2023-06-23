@@ -1,14 +1,18 @@
 class SolarAgeCalculator {
   constructor(earthAge) {
     this.earthAge = earthAge;
-    this.solarYearLengths = {
+    this.solarYearLength = {
       Mercury: 0.24,
+      Venus: 0.62,
+      Mars: 1.88,
+      Jupiter: 11.86,
     };
   }
 
   getAgeInPlanetYears(planet) {
     const solarYearLength = this.solarYearLength[planet];
-    return this.earthAge / solarYearLength;
+    const ageInPlanetYears = this.earthAge / solarYearLength;
+    return ageInPlanetYears;
   }
 }
 
