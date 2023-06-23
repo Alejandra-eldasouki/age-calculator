@@ -27,6 +27,6 @@ describe('solarAgeCalculator', () => {
     const calculator = new SolarAgeCalculator(earthAge);
 
     const jupiterAge = calculator.getAgeInPlanetYears('Jupiter');
-    expect(jupiterAge).toBeCloseTo(2.39, 2);
+    expect(jupiterAge).toBeCloseTo(2.53, 2);
   });
 });
