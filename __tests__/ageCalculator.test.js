@@ -36,7 +36,7 @@ describe('solarAgeCalculator', () => {
 
     const yearsPassed = calculator.getYearsPassed(pastBirthdayAge);
     expect(yearsPassed.Earth).toBe(13);
-    expect(yearsPassed.Mercury).toBeCloseTo(parseFloat((54.2).toFixed(1)), 2);
+    expect(yearsPassed.Mercury).toBeCloseTo(54.2, 1);
     expect(yearsPassed.Venus).toBeCloseTo(20.97, 2);
     expect(yearsPassed.Mars).toBeCloseTo(6.91, 2);
     expect(yearsPassed.Jupiter).toBeCloseTo(1.09, 2);
