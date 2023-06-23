@@ -41,4 +41,16 @@ describe('solarAgeCalculator', () => {
     expect(yearsPassed.Mars).toBeCloseTo(6.91, 2);
     expect(yearsPassed.Jupiter).toBeCloseTo(1.09, 2);
   });
+  test('should determine years yet to pass until a future birthday', () => {
+    const earthAge = 56;
+    const futureBirthdayAge = 61;
+    const calculator = new SolarAgeCalculator(earthAge);
+
+    const yearsRemaining = calculator.getYearsRemaining(futureBirthdayAge);
+    expect(yearsRemaining.Earth).toBe(5);
+    expect(yearsRemaining.Mercury).toBeCloseTo(20.83, 2);
+    expect(yearsRemaining.Venus).toBeCloseTo(8.06, 2);
+    expect(yearsRemaining.Mars).toBeCloseTo(2.65, 2);
+    expect(yearsRemaining.Jupiter).toBeCloseTo(0.42, 2);
+  });
 });
