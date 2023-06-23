@@ -2,6 +2,7 @@ const path = require('path');
 // below  const path = require('path');, add this line:
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', // this indicates the main js file that everything will be bundled into
@@ -14,6 +15,8 @@ module.exports = {
     },
   },
   plugins: [
+    new ESLintPlugin(),
+
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Project', // this line will be the title that shows up in your browser tab
