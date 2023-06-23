@@ -8,4 +8,11 @@ describe('solarAgeCalculator', () => {
     const mercuryAge = calculator.getAgeInPlanetYears('Mercury');
     expect(mercuryAge).toBeCloseTo(125, 2);
   });
+  test('should calculate age in Venus years', () => {
+    const earthAge = 30;
+    const calculator = new SolarAgeCalculator(earthAge);
+
+    const venusAge = calculator.getAgeInPlanetYears('Venus');
+    expect(venusAge).toBeCloseTo(48.39, 2);
+  });
 });
