@@ -29,12 +29,17 @@ describe('solarAgeCalculator', () => {
     const jupiterAge = calculator.getAgeInPlanetYears('Jupiter');
     expect(jupiterAge).toBeCloseTo(2.53, 2);
   });
-  test('should calculate years since past birthday on a planet', () => {
+  test('should determine years passed since a past birthday', () => {
+    const earthAge = 56;
     const pastBirthdayAge = 43;
-    const yearsSincePastBirthday = calculator.getYearSincePastBirthday(
-      'Mercury',
-      pastBirthdayAge
-    );
-    expect(yearsSincePastBirthday).toBeCloseTo(54.16, 2);
-  });
+    const calculator = new SolarAgeCalculator(earthAge);
+
+    const yearsPassed = calculator.getYearsPassed(pastBirthdayAge);
+    expect(yearsPassed).toEqual({
+      Earth: 13,
+      Mercury: 54.17,
+      Venus: 20.97,
+      Mars: 6.91,
+      Jupiter: 1.09
+    });
 });

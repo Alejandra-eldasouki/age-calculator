@@ -14,6 +14,11 @@ class SolarAgeCalculator {
     const ageInPlanetYears = this.earthAge / solarYearLength;
     return ageInPlanetYears;
   }
+
+  getYearsSincePastBirthday(planet, pastBirthdayAge) {
+    const planetAge = this.getAgeInPlanetYears(planet);
+    return planetAge - pastBirthdayAge;
+  }
 }
 
 module.exports = SolarAgeCalculator;
