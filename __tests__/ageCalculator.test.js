@@ -50,7 +50,7 @@ describe('solarAgeCalculator', () => {
     expect(yearsRemaining.Earth).toBe(5);
     expect(yearsRemaining.Mercury).toBeCloseTo(20.83, 2);
     expect(yearsRemaining.Venus).toBeCloseTo(8.06, 2);
-    expect(yearsRemaining.Mars).toBeCloseTo(2.65, 2);
+    expect(yearsRemaining.Mars).toBeCloseTo(2.66, 3);
     expect(yearsRemaining.Jupiter).toBeCloseTo(0.42, 2);
   });
 });
