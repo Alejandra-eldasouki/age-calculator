@@ -40,6 +40,7 @@ describe('solarAgeCalculator', () => {
       Mercury: 54.17,
       Venus: 20.97,
       Mars: 6.91,
-      Jupiter: 1.09
+      Jupiter: 1.09,
     });
+  });
 });
