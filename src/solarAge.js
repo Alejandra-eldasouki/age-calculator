@@ -5,4 +5,9 @@ export default function SolarAgeCalculator(earthAge) {
   };
 }
 
+getAgeInPlanetYears(planet) {
+const solarYearLength = this.solarYearLength[planet];
+return this.earthAge / solarYearLength;
+}
+
 module.exports = SolarAgeCalculator;
