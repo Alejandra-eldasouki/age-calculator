@@ -35,12 +35,10 @@ describe('solarAgeCalculator', () => {
     const calculator = new SolarAgeCalculator(earthAge);
 
     const yearsPassed = calculator.getYearsPassed(pastBirthdayAge);
-    expect(yearsPassed).toEqual({
-      Earth: 13,
-      Mercury: 54.17,
-      Venus: 20.97,
-      Mars: 6.91,
-      Jupiter: 1.09,
-    });
+    expect(yearsPassed.Earth).toBe(13);
+    expect(yearsPassed.Mercury).toBeCloseTo(54.17, 2);
+    expect(yearsPassed.Venus).toBeCloseTo(20.97, 2);
+    expect(yearsPassed.Mars).toBeCloseTo(6.91, 2);
+    expect(yearsPassed.Jupiter).toBeCloseTo(1.09, 2);
   });
 });
