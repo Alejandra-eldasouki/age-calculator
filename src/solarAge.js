@@ -21,7 +21,9 @@ class SolarAgeCalculator {
     const yearsPassedInPlanetYears = {};
     for (const planet in this.solarYearLength) {
       const solarYearLength = this.solarYearLength[planet];
-      yearsPassedInPlanetYears[planet] = yearsPassed / solarYearLength;
+      yearsPassedInPlanetYears[planet] = Math.floor(
+        yearsPassed / solarYearLength
+      );
     }
 
     return yearsPassedInPlanetYears;
