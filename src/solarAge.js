@@ -29,6 +29,26 @@ class SolarAgeCalculator {
 
     return yearsPassedInPlanetYears;
   }
+  roundToPrecision(value, precision) {
+    const multiplier = 10 ** precision;
+    return Math.round(value * multiplier) / multiplier;
+  }
+
+  getYearsRemaining(futureBirthdayAge) {
+    const yearsRemaining = futureBirthdayAge - this.earthAge;
+    const mercuryYears = this.roundToPrecision(yearsRemaining / 0.24, 2);
+    const venusYears = this.roundToPrecision(yearsRemaining / 0.62, 2);
+    const marsYears = this.roundToPrecision(yearsRemaining / 1.88, 2);
+    const jupiterYears = this.roundToPrecision(yearsRemaining / 11.86, 2);
+
+    return {
+      Earth: yearsRemaining,
+      Mercury: mercuryYears,
+      Venus: venusYears,
+      Mars: marsYears,
+      Jupiter: jupiterYears,
+    };
+  }
 }
 
 module.exports = SolarAgeCalculator;
