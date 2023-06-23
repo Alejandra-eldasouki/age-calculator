@@ -29,4 +29,12 @@ describe('solarAgeCalculator', () => {
     const jupiterAge = calculator.getAgeInPlanetYears('Jupiter');
     expect(jupiterAge).toBeCloseTo(2.53, 2);
   });
+  test('should calculate years since past birthday on a planet', () => {
+    const pastBirthdayAge = 43;
+    const yearsSincePastBirthday = calculator.getYearSincePastBirthday(
+      'Mercury',
+      pastBirthdayAge
+    );
+    expect(yearsSincePastBirthday).toBeCloseTo(54.16, 2);
+  });
 });
