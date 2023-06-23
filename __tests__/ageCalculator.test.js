@@ -15,4 +15,11 @@ describe('solarAgeCalculator', () => {
     const venusAge = calculator.getAgeInPlanetYears('Venus');
     expect(venusAge).toBeCloseTo(48.39, 2);
   });
+  test('should calculate age in Jupiter years', () => {
+    const earthAge = 30;
+    const calculator = new SolarAgeCalculator(earthAge);
+
+    const jupiterAge = calculator.getAgeInPlanetYears('Jupiter');
+    expect(jupiterAge).toBeCloseTo(2.39, 2);
+  });
 });
