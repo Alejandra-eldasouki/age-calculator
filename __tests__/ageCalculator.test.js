@@ -1,10 +1,11 @@
-import SolarAgeCalculator from '../src/solarAge.js';
+const SolarAgeCalculator = require('../src/solarAge.js');
 
 describe('solarAgeCalculator', () => {
-  const earthAge = 56;
-  const calculator = new SolarAgeCalculator(earthAge);
-});
-test('should calculate age in Mercury years', () => {
-  const mercuryAge = calculator.getInPlanetYears('Mercury');
-  expect(mercuryAge).toBeCloseTo(233.33, 2);
+  test('should calculate age in Mercury years', () => {
+    const earthAge = 30;
+    const calculator = new SolarAgeCalculator(earthAge);
+
+    const mercuryAge = calculator.getAgeInPlanetYears('Mercury');
+    expect(mercuryAge).toBeCloseTo(7.2, 2);
+  });
 });

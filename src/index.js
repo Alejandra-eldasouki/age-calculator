@@ -4,7 +4,8 @@ import SolarAgeCalculator from './solarAge';
 const earthAgeInput = document.getElementById('earth-age');
 const calculateButton = document.getElementById('calculate-button');
 const resultContainer = document.getElementById('results-container');
-
+// eslint-disable-next-line no-unused-vars
+let calculator;
 calculateButton.addEventListener('click', () => {
   const earthAge = parseFloat(earthAgeInput.value);
   if (isNaN(earthAge)) {
