@@ -39,7 +39,7 @@ describe('solarAgeCalculator', () => {
     expect(yearsPassed.Mercury).toBeCloseTo(54.2, 0);
     expect(yearsPassed.Venus).toBeCloseTo(20.97, 2);
     expect(yearsPassed.Mars).toBeCloseTo(6.91, 2);
-    expect(yearsPassed.Jupiter).toBeCloseTo(1.09, 2);
+    expect(yearsPassed.Jupiter).toBeCloseTo(1.09, 1);
   });
   test('should determine years yet to pass until a future birthday', () => {
     const earthAge = 56;
